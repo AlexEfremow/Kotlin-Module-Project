@@ -28,10 +28,6 @@ class Archive(val name: String) {
 class Storage {
     private var body = emptyList<Archive>().toMutableList()
 
-    fun addArchive(archive: Archive) {
-        this.body.add(archive)
-        println("Архив ${archive.name} был добавлен")
-    }
 
     fun showArchives() {
         println("Архивы: $body")
