@@ -15,7 +15,8 @@ class NotesController() {
             when (readLine()?.toIntOrNull()) {
                 0 -> {
                     println("Введите название Архива: ")
-                    newStorage.addArchive(Archive(readLine() ?: ""))
+                    newStorage.body.add(Archive(readLine() ?: ""))
+                    println("Архив был добавлен")
                 }
                 1 -> {
                     newStorage.showArchives()
@@ -33,9 +34,9 @@ class NotesController() {
             when (readLine()?.toIntOrNull()) {
                 1 -> {
                     println("Введите название Архива: ")
-                    val chooseArchive = newStorage.findArchive(readlnOrNull() ?: "")
-                    if (chooseArchive != null) {
-                        showArchive(chooseArchive)
+                    val chosenArchive = newStorage.findArchive(readlnOrNull() ?: "")
+                    if (chosenArchive != null) {
+                        showArchive(chosenArchive)
                     } else {
                         println("Ошибка!\n")
                     }
