@@ -26,7 +26,7 @@ class Archive(val name: String) {
 }
 
 class Storage {
-    private var body = emptyList<Archive>().toMutableList()
+    var body = emptyList<Archive>().toMutableList()
 
 
     fun showArchives() {
