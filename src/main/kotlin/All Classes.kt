@@ -1,4 +1,4 @@
-class Note( val name: String,  val body: String) {
+class Note( val name: String,  val body: String){
 
     override fun toString(): String {
         return ("Заметка: ${this.name}")
@@ -6,7 +6,7 @@ class Note( val name: String,  val body: String) {
 }
 
 class Archive(val name: String) {
-    private var body = emptyList<Note>().toMutableList()
+    var body = emptyList<Note>().toMutableList()
 
     fun addNote(note: Note) {
         this.body.add(note)
@@ -27,7 +27,6 @@ class Archive(val name: String) {
 
 class Storage {
     var body = emptyList<Archive>().toMutableList()
-
 
     fun showArchives() {
         println("Архивы: $body")
